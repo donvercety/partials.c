@@ -1,0 +1,3 @@
+# Partials C
+
+Snippets & examples.
