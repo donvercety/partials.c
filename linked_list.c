@@ -8,7 +8,7 @@ typedef struct node
 }
 node;
 
-void make_mode(node *node, int number);
+void make_node(node *node, int number);
 void list_show(node *list);
 void list_free(node *list);
 
@@ -16,16 +16,16 @@ int main(void) {
 
     // initialize list of size 0
     node *list = malloc(sizeof(node));
-    make_mode(list, 1); 
+    make_node(list, 1); 
 
     // add number to list
     node *n = malloc(sizeof(node));
-    make_mode(n, 2);
+    make_node(n, 2);
     list->next = n;
 
     // add number to list
     n = malloc(sizeof(node));
-    make_mode(n, 3);
+    make_node(n, 3);
     list->next->next = n;
 
     list_show(list);
@@ -37,7 +37,7 @@ int main(void) {
 // Helpers
 // ----------------------------------------------------------------------------
 
-void make_mode(node *node, int number) {
+void make_node(node *node, int number) {
     if (node == NULL) exit(1);
 
     node->number = number;
